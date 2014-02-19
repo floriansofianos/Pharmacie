@@ -14,7 +14,6 @@ namespace Pharmacie.Controller
         [HttpPost]
         public ActionResult SendMail(OrdonnanceModel form, HttpPostedFileBase file)
         {
-            OrdonnanceManager.getAllOrdonnances();
             string retValue = "There was an error submitting the form, please try again later.";
             if (!ModelState.IsValid || file == null)
             {
