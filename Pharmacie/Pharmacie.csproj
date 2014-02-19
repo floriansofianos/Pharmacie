@@ -261,8 +261,10 @@
   <ItemGroup>
     <Compile Include="Controllers\OrdonnanceController.cs" />
     <Compile Include="Models\Ordonnance.cs" />
+    <Compile Include="Models\OrdonnanceManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

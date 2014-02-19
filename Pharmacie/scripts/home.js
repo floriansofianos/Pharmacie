@@ -30,7 +30,7 @@ initialize = function(){
   var myOptions = {
     zoom      : 16,
     center    : latLng,
-    mapTypeId : google.maps.MapTypeId.ROADMAP, // Type de carte, différentes valeurs possible HYBRID, ROADMAP, SATELLITE, TERRAIN
+    mapTypeId : google.maps.MapTypeId.ROADMAP,
     maxZoom   : 20
   };
  

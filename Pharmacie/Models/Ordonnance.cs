@@ -16,10 +16,13 @@ namespace Pharmacie.Models
 
             [Required]
             public string Email { get; set; }
+            
+            internal string ordonnanceFile { get; set; }
 
-            [Required]
-            public HttpPostedFileBase ordonnanceFile { get; set; }
+            public override string ToString()
+            {
+                return Name + ";" + Email + ";" + ordonnanceFile;
+            }
 
-        
     }
 }

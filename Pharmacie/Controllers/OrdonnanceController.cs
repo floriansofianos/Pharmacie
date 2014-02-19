@@ -14,19 +14,21 @@ namespace Pharmacie.Controller
         [HttpPost]
         public ActionResult SendMail(OrdonnanceModel form, HttpPostedFileBase file)
         {
+            OrdonnanceManager.getAllOrdonnances();
             string retValue = "There was an error submitting the form, please try again later.";
-            form.ordonnanceFile = file;
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || file == null)
             {
                 return Content(retValue);
             }
 
             if (ModelState.IsValid)
             {
-                //DO Something
                 try
                 {
-                    retValue = "Your Request for Contact was submitted successfully. We will contact you shortly.";
+                    form.ordonnanceFile = OrdonnanceManager.filePath + file.FileName;
+                    file.SaveAs(OrdonnanceManager.filePath + file.FileName);
+                    OrdonnanceManager.saveOrdonnance(form);
+                    retValue = "Your Request was submitted successfully. We will contact you shortly.";
                 }
                 catch (Exception)
                 {
