@@ -25,6 +25,7 @@ namespace Pharmacie.Controller
                 try
                 {
                     form.ordonnanceFile = OrdonnanceManager.filePath + file.FileName;
+                    form._isApproved = false;
                     file.SaveAs(OrdonnanceManager.filePath + file.FileName);
                     OrdonnanceManager.saveOrdonnance(form);
                     retValue = "Your Request was submitted successfully. We will contact you shortly.";
@@ -37,6 +38,13 @@ namespace Pharmacie.Controller
 
             }
             return Content(retValue);
+        }
+
+        [HttpGet]
+        public ActionResult DeleteOrdonnance(int id)
+        {
+           
+            return Content("");
         }
     }
 }

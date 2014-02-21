@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
@@ -19,9 +20,21 @@ namespace Pharmacie.Models
             
             internal string ordonnanceFile { get; set; }
 
+            internal bool _isApproved { get; set; }
+
             public override string ToString()
             {
-                return Name + ";" + Email + ";" + ordonnanceFile;
+                return Name + ";" + Email + ";" + ordonnanceFile + ";" + _isApproved;
+            }
+
+            public string getOrdonnanceFileURL()
+            {
+                return "/Ordonnances/" + Path.GetFileName(ordonnanceFile);
+            }
+
+            public bool isApproved()
+            {
+                return _isApproved;
             }
 
     }

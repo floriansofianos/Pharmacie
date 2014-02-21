@@ -20,6 +20,9 @@ $(document).ready(function(){
     		infoWindow.open(map,marker);
 		});
 	}
+	
+
+	
 });
 
 var map;
@@ -36,4 +39,17 @@ initialize = function(){
  
   map      = new google.maps.Map(document.getElementById('map_container'), myOptions);
 };
+
+deleteOrdonnance = function(id){
+	$.get( "/Handlers/OrdonnanceHandler.ashx", { cas: "deleteOrdonnance", id: id } )
+		.done(function( data ) {
+			alert( "Data deleted " + data );
+		});
+	};
  
+approveOrdonnance = function(id){
+	$.get( "/Handlers/OrdonnanceHandler.ashx", { cas: "approveOrdonnance", id: id } )
+		.done(function( data ) {
+			alert( "Data approved " + data );
+		});
+	};

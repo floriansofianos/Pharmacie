@@ -25,7 +25,8 @@ namespace Pharmacie.Models
                     {
                         Name = line.Split(';')[0],
                         Email = line.Split(';')[1],
-                        ordonnanceFile = line.Split(';')[2]
+                        ordonnanceFile = line.Split(';')[2],
+                        _isApproved = Convert.ToBoolean(line.Split(';')[3])
                     });
                     line = fichierOrdonnances.ReadLine();
                 }
@@ -38,6 +39,31 @@ namespace Pharmacie.Models
         public static void saveOrdonnance(OrdonnanceModel ordonnance)
         {
             File.WriteAllText(configPath,ordonnance.ToString() + Environment.NewLine);
+        }
+
+        public static void deleteOrdonnance(int id)
+        {
+            var tempFile = Path.GetTempFileName();
+            var linesToKeep = File.ReadLines(configPath).Where(l => l != File.ReadLines(configPath).ToList()[id]);
+
+            File.WriteAllLines(tempFile, linesToKeep);
+
+            File.Delete(configPath);
+            File.Move(tempFile, configPath);
+        }
+
+        public static void approveOrdonnance(int id)
+        {
+            var tempFile = Path.GetTempFileName();
+
+            var allOrdonnances = OrdonnanceManager.getAllOrdonnances();
+            allOrdonnances[id]._isApproved = true;
+
+            List<string> lines = allOrdonnances.Select(ordonnance => ordonnance.ToString()).ToList();
+
+            File.WriteAllLines(tempFile, lines);
+            File.Delete(configPath);
+            File.Move(tempFile, configPath);
         }
     }
 }

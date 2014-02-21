@@ -74,3 +74,8 @@ C:\Serveur\Site\Pharmacie\Pharmacie\bin\umbraco.MacroEngines.xml
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\umbraco.providers.xml
 C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.dll
 C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.pdb
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\DataAnnotationsExtensions.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\RestSharp.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\SendGridMail.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\RestSharp.xml
+C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.csprojResolveAssemblyReference.cache
