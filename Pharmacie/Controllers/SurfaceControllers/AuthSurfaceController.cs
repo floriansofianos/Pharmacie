@@ -189,9 +189,7 @@ namespace Pharmacie.Controllers.SurfaceControllers
                 //Save the member with the up[dated property value
                 findMember.Save();
 
-                //Send user an email to reset password with GUID in it
-                EmailHelper email = new EmailHelper();
-                email.SendResetPasswordEmail(findMember.Email, expiryTime.ToString("ddMMyyyyHHmmssFFFF"));
+                
             }
             else
             {
@@ -353,9 +351,7 @@ namespace Pharmacie.Controllers.SurfaceControllers
                 updateMember.Save();
             }
 
-            //Send out verification email, with GUID in it
-            EmailHelper email = new EmailHelper();
-            email.SendVerifyEmail(model.EmailAddress, tempGUID.ToString());
+           
 
             //Return the view...
             return PartialView("Register", new RegisterViewModel());

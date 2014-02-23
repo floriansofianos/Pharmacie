@@ -75,6 +75,14 @@ C:\Serveur\Site\Pharmacie\Pharmacie\bin\umbraco.providers.xml
 C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.dll
 C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.pdb
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\DataAnnotationsExtensions.dll
-C:\Serveur\Site\Pharmacie\Pharmacie\bin\RestSharp.dll
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\SendGridMail.dll
-C:\Serveur\Site\Pharmacie\Pharmacie\bin\RestSharp.xml
+C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.csproj.App.config
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\Microsoft.Threading.Tasks.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\Smtpapi.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\System.Net.Http.Extensions.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\System.Net.Http.Primitives.dll
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\Microsoft.Threading.Tasks.xml
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\System.Net.Http.Extensions.xml
+C:\Serveur\Site\Pharmacie\Pharmacie\bin\System.Net.Http.Primitives.xml
