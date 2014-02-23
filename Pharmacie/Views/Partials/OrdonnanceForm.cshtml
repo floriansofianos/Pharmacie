@@ -3,7 +3,9 @@
 @using(Html.BeginUmbracoForm<Pharmacie.Controller.OrdonnanceController>("SendMail"))
 {
     @Html.EditorFor(x => Model)
+	<span>Scan de votre ordonnance</span><br />
 	<input type="file" name="file" id="file" />
+	<br /><br />
     <input type="submit"/>
 }
  

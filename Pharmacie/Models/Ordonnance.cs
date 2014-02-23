@@ -13,9 +13,11 @@ namespace Pharmacie.Models
     {
 
             [Required]
+            [DisplayName("Nom")]
             public string Name { get; set; }
 
             [Required]
+            [DisplayName("Adresse mail")]
             public string Email { get; set; }
             
             internal string ordonnanceFile { get; set; }

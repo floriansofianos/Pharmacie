@@ -78,4 +78,3 @@ C:\Serveur\Site\Pharmacie\Pharmacie\bin\DataAnnotationsExtensions.dll
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\RestSharp.dll
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\SendGridMail.dll
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\RestSharp.xml
-C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.csprojResolveAssemblyReference.cache

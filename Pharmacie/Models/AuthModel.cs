@@ -35,12 +35,13 @@ namespace Pharmacie.Models
     /// </summary>
     public class LoginViewModel
     {
-        [DisplayName("Email address")]
+        [DisplayName("Mail")]
         [Required(ErrorMessage = "Please enter your email address")]
         [EmailAddress(ErrorMessage = "Please enter a valid email address")]
         public string EmailAddress { get; set; }
 
-        [UIHint("Password")]
+        [UIHint("Mot de passe")]
+        [DisplayName("Mot de passe")]
         [Required(ErrorMessage = "Please enter your password")]
         public string Password { get; set; }
 

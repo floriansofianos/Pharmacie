@@ -15,7 +15,7 @@ namespace Pharmacie.Models
 
         public string Name { get; set; }
 
-        [DisplayName("Email address")]
+        [DisplayName("Mail")]
         public string EmailAddress { get; set; }
 
         [HiddenInput(DisplayValue = false)]
