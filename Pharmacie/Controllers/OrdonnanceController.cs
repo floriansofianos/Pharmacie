@@ -14,10 +14,11 @@ namespace Pharmacie.Controller
         [HttpPost]
         public ActionResult SendMail(OrdonnanceModel form, HttpPostedFileBase file)
         {
-            string retValue = "There was an error submitting the form, please try again later.";
+            string retValue = "Une erreur est survenue lors de l'envoi de vos données. Merci de remplir tous les champs ci-dessous.";
             if (!ModelState.IsValid || file == null)
             {
-                return Content(retValue);
+                TempData.Add("CustomMessageError",retValue);
+                return CurrentUmbracoPage();
             }
 
             if (ModelState.IsValid)
@@ -28,7 +29,9 @@ namespace Pharmacie.Controller
                     form._isApproved = false;
                     file.SaveAs(OrdonnanceManager.filePath + file.FileName);
                     OrdonnanceManager.saveOrdonnance(form);
-                    retValue = "Your Request was submitted successfully. We will contact you shortly.";
+                    retValue = "Votre demande est acceptée. Vous recevrez un mail lorsque nous aurons traité votre demande.";
+                    TempData.Add("CustomMessage", retValue);
+                    return RedirectToCurrentUmbracoPage();
                 }
                 catch (Exception)
                 {

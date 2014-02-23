@@ -24,8 +24,18 @@
                             {
                                 <span><img src="@CurrentPage.Image" alt="" /></span>
                             }
-
-                            @Html.Partial("OrdonnanceForm", ordonnance)
+						@if (TempData["CustomMessage"] == null)
+						{
+							if (TempData["CustomMessageError"] != null)
+							{
+								<p class="error">@TempData["CustomMessageError"]</p>
+							}
+                        	@Html.Partial("OrdonnanceForm", ordonnance)
+						}
+						else
+						{
+							<p>@TempData["CustomMessage"]</p>
+						}
                         </section>                           
                     </article>
                     <!-- /Content -->

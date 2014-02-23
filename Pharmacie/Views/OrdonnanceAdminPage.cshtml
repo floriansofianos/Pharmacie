@@ -30,8 +30,8 @@
                             }
                             @foreach(var ordonnance in Pharmacie.Models.OrdonnanceManager.getAllOrdonnances().Where(o => !o.isApproved()))
 							{
-								<span style="float: left;width: 200px;">@ordonnance.Name</span>
-								<span style="float: left;width: 200px;">@ordonnance.Email</span>
+								<span style="float: left;width: 150px;">@ordonnance.Name</span>
+								<span style="float: left;width: 300px;">@ordonnance.Email</span>
 								<span style="float: left;width: 100px;"><a href="@ordonnance.getOrdonnanceFileURL()">Fichier</a></span>
 								<span onclick="approveOrdonnance(@index);" style="float: left;cursor: pointer;width: 70px;"><img src="/images/green-ok-icon.png" alt="" /></span>
 								<span onclick="deleteOrdonnance(@index);" style="float: left;cursor: pointer;width: 70px;"><img src="/images/bin-icon.png" alt="" /></span><br/>

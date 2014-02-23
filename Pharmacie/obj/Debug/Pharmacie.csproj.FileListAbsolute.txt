@@ -86,3 +86,4 @@ C:\Serveur\Site\Pharmacie\Pharmacie\bin\Microsoft.Threading.Tasks.xml
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\Microsoft.Threading.Tasks.Extensions.xml
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\System.Net.Http.Extensions.xml
 C:\Serveur\Site\Pharmacie\Pharmacie\bin\System.Net.Http.Primitives.xml
+C:\Serveur\Site\Pharmacie\Pharmacie\obj\Debug\Pharmacie.csprojResolveAssemblyReference.cache
